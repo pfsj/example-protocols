@@ -170,7 +170,7 @@ return {
       },
       {
         "id": "namegen2",
-        "type": "namegenerator",
+        "type": "name-generator",
         "title": "Name Generator Title",
         "params": {
           "nodeType": 'person',
