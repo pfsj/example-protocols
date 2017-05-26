@@ -1,81 +1,59 @@
 /* eslint-disable */
 
+const fields = [
+  {
+    label: 'Name',
+    name: 'name',
+    type: 'text',
+    placeholder: 'Name',
+    required: true,
+  },
+  {
+    label: 'Nickname',
+    name: 'nickname',
+    type: 'nickname',
+    placeholder: 'Nickname',
+    required: true,
+  },
+  {
+    label: 'Age',
+    name: 'age',
+    type: 'number',
+    validation: {
+      required: true,
+      min: 0,
+      max: 200,
+    },
+  },
+  {
+    label: 'Choose some options',
+    name: 'chosen_options',
+    type: 'options',
+    options: ['foo', 'bar', 'baz', 'buzz', 'fizz', 'pop'],
+    validation: {
+      required: true,
+      min: 2,
+      max: 3,
+    },
+  },
+];
+
 return {
   config: {
     "name": "My first interview protocol",
     "version": "1.2.3",
     "required": "1.2.4",
     "exportPath": "some/path/here.json",
-    "data": {
-      "previous": {
-        nodes: [
-          {
-            uid: "previous_1",
-            type: "person",
-            name: "Fred",
-            nickname: "Foo",
-          },
-          {
-            uid: "previous_2",
-            type: "person",
-            name: "Bob",
-            nickname: "Bar",
-          },
-          {
-            uid: "previous_3",
-            type: "person",
-            name: "Barry",
-            nickname: "Baz",
-          },
-        ],
-      },
-    },
     "stages": [
       {
         "id": "quiz1",
         "type": "quiz",
         "title": "Quiz",
-        "params":
+        "params": {
           form: {
             title: 'Answer some questions',
             formName: 'quiz1',
-            fields: [
-              {
-                label: 'Name',
-                name: 'name',
-                type: 'text',
-                placeholder: 'Name',
-                required: true,
-              },
-              {
-                label: 'Nickname',
-                name: 'nickname',
-                type: 'nickname',
-                placeholder: 'Nickname',
-                required: true,
-              },
-              {
-                label: 'Age',
-                name: 'age',
-                type: 'number',
-                validation: {
-                  required: true,
-                  min: 0,
-                  max: 200,
-                }
-              },
-              {
-                label: 'Choose some options',
-                name: 'chosen_options',
-                type: 'options',
-                options: ['foo', 'bar', 'baz', 'buzz', 'fizz', 'pop'],
-                validation: {
-                  required: true,
-                  min: 2,
-                  max: 3,
-                }
-              },
-            ],
+            fields: fields,
           },
         },
       },
