@@ -50,6 +50,13 @@ return {
         "type": "quiz",
         "title": "Quiz",
         "params": {
+          "prompts": [
+            {
+              id: '6qz',
+              title: 'Huge quize',
+              nodeAttributes: {},
+            },
+          ],
           form: {
             title: 'Answer some questions',
             formName: 'quiz1',
