@@ -52,8 +52,9 @@ return {
     "stages": [
       {
         "id": "namegen1",
-        "type": "namegenerator",
-        "title": "Name Generator Title",
+        "type": "NameGenerator",
+        "icon": "menu-name-generator",
+        "title": "Name Generator Title 1",
         "params": {
           "nodeType": 'person',
           "panels": [
@@ -108,8 +109,9 @@ return {
       },
       {
         "id": "namegen2",
-        "type": "namegenerator",
-        "title": "Name Generator Title",
+        "type": "NameGenerator",
+        "icon": "menu-name-generator",
+        "title": "Name Generator Title 2",
         "params": {
           "nodeType": 'person',
           "prompts": [
