@@ -89,7 +89,7 @@ return {
     "stages": [
       {
         "id": "quiz1",
-        "type": "quiz",
+        "type": "Quiz",
         "title": "Quiz",
         "params": {
           "prompts": [
