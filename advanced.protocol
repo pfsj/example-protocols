@@ -23,7 +23,7 @@ var MyAmazingInterface = environment.createReactClass({
      return createElement('div', { key: index++, className: "name-generator" },
       [
         createElement('div', { key:index++, className: "name-generator__main" },
-          createElement('div', { key:index++, className: "name-generator__nodes" },
+          createElement('div', { key: index++, className: "name-generator__nodes" },
             [
               createElement('h1', { key: index++ }, 'My Amazing Interface'),
               createElement(api.elements.NodeList, {
