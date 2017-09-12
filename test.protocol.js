@@ -107,7 +107,7 @@ let generateNickname = (name) => {
 
 }
 
-export default {
+return {
   config: {
     "name": "Demo Protocol",
     "version": "1.0.0",
