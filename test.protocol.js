@@ -129,7 +129,7 @@ return {
           "prompts": [
             {
               id: '6cl',
-              title: 'Within the past 6 months, who have you felt particularly close to, or discussed important personal matters with?',
+              title: 'Test protocol screen 1 prompt 1',
               nodeAttributes: {
                 special_category: 46,
                 close_friend: true,
@@ -137,7 +137,7 @@ return {
             },
             {
               id: '6su',
-              title: "Within the past 6 months, who has been supportive?",
+              title: "Test protocol screen 1 prompt 2",
               nodeAttributes: {
                 support_friend: true,
               },
