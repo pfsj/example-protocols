@@ -29,8 +29,8 @@
               "maxValue": 100
             }
           },
-          "nickname": {
-            "label": "Nickname",
+          "nameLabel": {
+            "label": "Label Name",
             "description": "Human readable description",
             "type": "text",
             "validation": {
@@ -44,15 +44,6 @@
             "description": "Human readable description",
             "type": "enumerable",
             "options": [46]
-          },
-          "some_options": {
-            "label": "Some possible options",
-            "description": "Human readable description",
-            "type": "options",
-            "options": [46],
-            "validation": {
-              "max": 1
-            }
           },
           "close_friend": {
             "label": "Close Friend",
@@ -131,15 +122,15 @@
         {
           "uid": "previous_1",
           "type": "person",
-          "name": "Anita",
-          "nickname": "Annie",
+          "name": "Lauren",
+          "nickname": "Lauren",
           "age": "23"
         },
         {
           "uid": "previous_2",
           "type": "person",
-          "name": "Barry",
-          "nickname": "Baz",
+          "name": "Benjamin",
+          "nickname": "Ben",
           "age": "23"
         },
         {
@@ -152,15 +143,15 @@
         {
           "uid": "previous_4",
           "type": "person",
-          "name": "Dee",
-          "nickname": "Dee",
+          "name": "Leo",
+          "nickname": "Lee",
           "age": "23"
         },
         {
           "uid": "previous_5",
           "type": "person",
-          "name": "Eugine",
-          "nickname": "Eu",
+          "name": "Ryan",
+          "nickname": "Ryan",
           "age": "23"
         }
       ]
