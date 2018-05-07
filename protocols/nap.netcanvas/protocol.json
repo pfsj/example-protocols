@@ -108,7 +108,7 @@
     {
       "id": "namegen1",
       "type": "NameGenerator",
-      "label": "Name Generator 1",
+      "label": "Close NG",
       "form": "person",
       "subject": {
         "entity": "node",
@@ -130,7 +130,7 @@
     {
       "id": "namegen2",
       "type": "NameGenerator",
-      "label": "Name Generator 2",
+      "label": "Roommate NG",
       "form": "person",
       "subject": {
         "entity": "node",
@@ -161,7 +161,7 @@
     {
       "id": "sociogram",
       "type": "Sociogram",
-      "label": "Sociogram",
+      "label": "Layout Sociogram",
       "prompts": [
         {
           "id": "layout",
@@ -183,7 +183,7 @@
     {
       "id": "sociogram2",
       "type": "Sociogram",
-      "label": "Sociogram Edges",
+      "label": "Close Sociogram",
       "prompts": [
         {
           "id": "edge",
@@ -209,7 +209,7 @@
     {
       "id": "sociogram3",
       "type": "Sociogram",
-      "label": "Sociogram Edges 2",
+      "label": "Roommate Sociogram",
       "prompts": [
         {
           "id": "edge2",
@@ -234,7 +234,7 @@
     },
     {
       "id": "exportInstruction",
-      "label": "Export Data",
+      "label": "Data Export Reminder",
       "type": "Information",
       "title": "Exporting Data",
       "items": [
