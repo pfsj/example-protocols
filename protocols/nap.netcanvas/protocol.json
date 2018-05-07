@@ -1,0 +1,236 @@
+{
+  "name": "Teaching Protocol",
+  "version": "1.0.0",
+  "networkCanvasVersion": "~4.0.0",
+  "variableRegistry": {
+    "node": {
+      "person": {
+        "label": "Person",
+        "color": "coral",
+        "displayVariable": "nickname",
+        "iconVariant": "add-a-person",
+        "variables": {
+          "name": {
+            "label": "Name",
+            "description": "The alter's name.",
+            "type": "text",
+            "validation": {
+              "required": true,
+              "minLength": 1,
+              "maxLength": 24
+            }
+          },
+          "age": {
+            "label": "Age",
+            "description": "Alter Age",
+            "type": "number",
+            "validation": {
+              "required": true
+            }
+          },
+          "gender": {
+            "label": "Please describe how this person describes their gender identity",
+            "description": "Percieved gender of the alter.",
+            "type": "text",
+            "options": ["Cisgender Female", "Cisgender Male","Transgender: Female to Male","Transgender: Male to Female","Other","Don't Know"],
+            "validation": {
+              "required": false
+            }
+          },
+          "sexOrient": {
+            "label": "Please describe how this person describes their sexual orientation",
+            "description": "Alter Sexual Orientation",
+            "type": "text",
+            "options": ["Bisexual", "Heterosexual/Straight","Gay/Lesbian","Queer","Not Listed / Other","Don't Know"],
+            "validation": {
+              "required": false
+            }
+          },
+          "nickname": {
+            "label": "Label Name",
+            "description": "Alter Label Name",
+            "type": "text",
+            "validation": {
+              "required": true,
+              "minLength": 1,
+              "maxLength": 27
+            }
+          }
+        }
+      }
+    },
+    "edge": {
+      "friends": {
+        "label": "Friends",
+        "color": "mustard",
+        "variables": {
+        }
+      },
+      "roommates": {
+        "label": "roommates",
+        "color": "kiwi",
+        "variables": {
+        }
+      }
+    }
+  },
+  "forms": {
+    "person": {
+      "title": "Add A Person",
+      "entity": "node",
+      "type": "person",
+      "optionToAddAnother": true,
+      "fields": [
+        {
+          "variable": "name",
+          "component": "TextInput"
+        },
+        {
+          "variable": "nickname",
+          "component": "TextInput"
+        },
+        {
+          "variable": "age",
+          "component": "TextInput"
+        },
+        {
+          "variable": "gender",
+          "component": "RadioGroup"
+        },
+        {
+          "variable": "sexOrient",
+          "component": "RadioGroup"
+        }
+      ]
+    }
+},
+  "stages": [
+    {
+      "id": "namegen1",
+      "type": "NameGenerator",
+      "label": "Name Generator 1",
+      "form": "person",
+      "subject": {
+        "entity": "node",
+        "type": "person"
+      },
+     "panels": [
+        "existing"
+      ],
+      "prompts": [
+        {
+          "id": "NameGen1",
+          "text": "Who are the people you are closest to? That is, people you see or talk to regularly and share your personal thoughts and feelings with during the last 12 months",
+          "additionalAttributes": {
+            "closeNameGen": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "namegen2",
+      "type": "NameGenerator",
+      "label": "Name Generator 2",
+      "form": "person",
+      "subject": {
+        "entity": "node",
+        "type": "person"
+      },
+     "panels": [
+        "existing"
+      ],
+      "prompts": [
+        {
+          "id": "nameGen2",
+          "text": "Who are the people that were your roommates during the last 12 months? For example, these are people that may have lived in the same dorm room, apartment, or house.",
+          "additionalAttributes": {
+            "roomNameGen": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "sociogram",
+      "type": "Sociogram",
+      "label": "Sociogram",
+      "prompts": [
+        {
+          "id": "layout",
+          "text": "Please arrange the nodes on the screen. Place people who know each other near each other and place the people you know best closest to the centre. Leave space between each node if you can.",
+          "subject": {
+            "entity": "node",
+            "type": "person"
+          },
+          "layout": {
+            "layoutVariable": "closenessLayout",
+            "allowPositioning": true
+          },
+          "nodeBinSortOrder": {
+            "nickname": "DESC"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sociogram2",
+      "type": "Sociogram",
+      "label": "Sociogram Edges",
+      "prompts": [
+        {
+          "id": "edge",
+          "text": "Please indicate any two people you know are very close or spent time together in the last 12 months",
+          "subject": {
+            "entity": "node",
+            "type": "person"
+          },
+          "layout": {
+            "layoutVariable": "closenessLayout",
+            "allowPositioning": true
+          },
+          "nodeBinSortOrder": {
+            "nickname": "DESC"
+          },
+          "edges": {
+            "display": ["friends"],
+            "create": "friends"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sociogram3",
+      "type": "Sociogram",
+      "label": "Sociogram Edges 2",
+      "prompts": [
+        {
+          "id": "edge2",
+          "text": "Please indicate any two people you know were roommates during the last 12 months. These are people that may have lived in the same dorm room, apartment, or house.",
+          "subject": {
+            "entity": "node",
+            "type": "person"
+          },
+          "layout": {
+            "layoutVariable": "closenessLayout",
+            "allowPositioning": true
+          },
+          "nodeBinSortOrder": {
+            "nickname": "DESC"
+          },
+          "edges": {
+            "display": ["roommates"],
+            "create": "roommates"
+          }
+        }
+      ]
+    },
+    {
+      "id": "exportInstruction",
+      "label": "Export Data",
+      "type": "Information",
+      "title": "Exporting Data",
+      "items": [
+        { "type": "text", "content": "<p>This is the end of the data collection stage. Please Save the Data File.</p>" }
+      ]
+    }
+  ]
+}

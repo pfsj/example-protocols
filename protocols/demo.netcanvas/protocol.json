@@ -7,7 +7,7 @@
       "person": {
         "label": "Person",
         "color": "coral",
-        "displayVariable": "nickname",
+        "displayVariable": "displayName",
         "variables": {
           "name": {
             "label": "Name",
@@ -67,28 +67,6 @@
           }
         }
       },
-      "venue": {
-        "label": "Venue",
-        "color": "kiwi",
-        "variables": {
-          "name": {
-            "label": "Name",
-            "description": "Human readable description",
-            "type": "text",
-            "validation": {
-              "required": true,
-              "minLength": 1,
-              "maxLength": 24
-            }
-          },
-          "location": {
-            "label": "Location",
-            "description": "Human readable description",
-            "type": "coordinates"
-          }
-        }
-      }
-    },
     "edge": {
       "friend": {
         "label": "Friend",
@@ -116,63 +94,6 @@
       }
     }
   },
-  "externalData": {
-    "previousInterview": {
-      "nodes": [
-        {
-          "uid": "previous_1",
-          "type": "person",
-          "name": "Lauren",
-          "nickname": "Lauren",
-          "age": "23"
-        },
-        {
-          "uid": "previous_2",
-          "type": "person",
-          "name": "Benjamin",
-          "nickname": "Ben",
-          "age": "23"
-        },
-        {
-          "uid": "previous_3",
-          "type": "person",
-          "name": "Rodrigo",
-          "nickname": "Rod",
-          "age": "23"
-        },
-        {
-          "uid": "previous_4",
-          "type": "person",
-          "name": "Leo",
-          "nickname": "Lee",
-          "age": "23"
-        },
-        {
-          "uid": "previous_5",
-          "type": "person",
-          "name": "Ryan",
-          "nickname": "Ryan",
-          "age": "23"
-        }
-      ]
-    },
-    "venue_list": {
-      "nodes": [
-        {
-          "type": "venue",
-          "name": "My Home"
-        },
-        {
-          "type": "venue",
-          "name": "My Workplace"
-        },
-        {
-          "type": "venue",
-          "name": "Local Bar"
-        }
-      ]
-    }
-  },
   "forms": {
     "person": {
       "title": "Add A Person",
@@ -184,7 +105,7 @@
           "component": "TextInput"
         },
         {
-          "variable": "nickname",
+          "variable": "displayName",
           "component": "TextInput"
         },
         {
@@ -208,7 +129,7 @@
           "component": "TextInput"
         },
         {
-          "variable": "nickname",
+          "variable": "displayName",
           "component": "TextInput"
         },
         {
