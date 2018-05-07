@@ -32,7 +32,7 @@
             "label": "Please describe how this person describes their gender identity",
             "description": "Percieved gender of the alter.",
             "type": "text",
-            "options": ["Cisgender Female", "Cisgender Male","Transgender: Female to Male","Transgender: Male to Female","Other","Don't Know"],
+            "options": ["Cisgender Female", "Cisgender Male","Transgender: Female to Male","Transgender: Male to Female","Not Listed / Other","Don't Know"],
             "validation": {
               "required": false
             }
