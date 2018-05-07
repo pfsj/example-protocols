@@ -150,6 +150,15 @@
       ]
     },
     {
+      "id": "stop",
+      "label": "Stop",
+      "type": "Information",
+      "title": "Stop",
+      "items": [
+        { "type": "text", "content": "<p>Stop here to decide which questions to answer next</p>" }
+      ]
+    },
+    {
       "id": "sociogram",
       "type": "Sociogram",
       "label": "Sociogram",
@@ -229,7 +238,7 @@
       "type": "Information",
       "title": "Exporting Data",
       "items": [
-        { "type": "text", "content": "<p>This is the end of the data collection stage. Please Save the Data File.</p>" }
+        { "type": "text", "content": "<p>This is the end of the data collection stage. Please save the data file.</p>" }
       ]
     }
   ]
