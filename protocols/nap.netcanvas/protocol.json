@@ -115,6 +115,7 @@
         "type": "person"
       },
      "panels": [
+        "title": "Already mentioned",
         "existing"
       ],
       "prompts": [
