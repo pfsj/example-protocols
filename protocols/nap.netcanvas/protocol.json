@@ -136,7 +136,7 @@
      "panels": [ 
         {
           "title": "Already mentioned",
-          "existing"
+          "dataSource": "existing"
         }
       ],
       "prompts": [
