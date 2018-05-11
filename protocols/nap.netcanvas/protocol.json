@@ -133,9 +133,11 @@
         "entity": "node",
         "type": "person"
       },
-     "panels": [
-        "title": "Already mentioned",
-        "existing"
+     "panels": [ 
+        {
+          "title": "Already mentioned",
+          "existing"
+        }
       ],
       "prompts": [
         {
