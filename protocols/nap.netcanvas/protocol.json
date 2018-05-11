@@ -114,10 +114,6 @@
         "entity": "node",
         "type": "person"
       },
-     "panels": [
-        "title": "Already mentioned",
-        "existing"
-      ],
       "prompts": [
         {
           "id": "NameGen1",
@@ -138,6 +134,7 @@
         "type": "person"
       },
      "panels": [
+        "title": "Already mentioned",
         "existing"
       ],
       "prompts": [
